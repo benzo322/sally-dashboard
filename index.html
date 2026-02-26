@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Intelligence Dashboard</title>
+    <title>Sally's Intelligence Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -11,9 +11,7 @@
             theme: {
                 extend: {
                     colors: {
-                        slate: {
-                            950: '#020617',
-                        }
+                        slate: { 950: '#020617' }
                     }
                 }
             }
@@ -21,168 +19,124 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .mono {
-            font-family: 'JetBrains+Mono', monospace;
-        }
-        .card-gradient {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'JetBrains+Mono', monospace; }
+        .card-gradient { background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%); }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-200 min-h-screen">
-    <!-- Header -->
+<body class="bg-slate-950 text-slate-200 min-h-screen pb-12">
     <header class="border-b border-slate-800 bg-slate-950/50 backdrop-blur-md sticky top-0 z-10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
                 <span class="text-3xl">🦖</span>
                 <div>
                     <h1 class="text-xl font-bold tracking-tight text-white leading-none">Sally's Intel</h1>
-                    <p class="text-xs text-slate-400 mt-1 mono uppercase tracking-widest">Personal Intelligence Dashboard</p>
+                    <p class="text-xs text-slate-400 mt-1 mono uppercase tracking-widest">Real-time Intelligence Board</p>
                 </div>
             </div>
-            <div class="flex items-center space-x-6 text-sm mono">
-                <div class="flex flex-col items-end">
-                    <span class="text-slate-500 text-[10px]">SYSTEM STATUS</span>
-                    <span class="text-emerald-400 flex items-center">
-                        <span class="w-2 h-2 bg-emerald-400 rounded-full mr-2 animate-pulse"></span>
-                        ONLINE
-                    </span>
-                </div>
-                <div class="h-8 w-[1px] bg-slate-800"></div>
-                <div class="text-right">
-                    <span class="text-slate-500 text-[10px]">OPERATOR</span>
-                    <p class="text-slate-300 font-medium">BEN</p>
+            <div class="flex items-center space-x-6 text-sm mono text-right">
+                <div>
+                    <span class="text-slate-500 text-[10px]">LAST UPDATED</span>
+                    <p class="text-slate-300 font-medium">2026-02-27 00:20</p>
                 </div>
             </div>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-6 py-8">
-        <!-- Dashboard Controls -->
         <div class="mb-8 flex justify-between items-end">
             <div>
                 <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Intelligence Stream</h2>
-                <p class="text-slate-500 text-xs">Curated based on: <span class="text-blue-400 italic">Agentic Dev, Tesla Model Y, EC Trends</span></p>
-            </div>
-            <div class="flex space-x-2">
-                <button class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs rounded border border-slate-700 transition-colors mono">REFRESH</button>
-                <button class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs rounded transition-colors mono">SYNC RAINDROP</button>
+                <p class="text-slate-500 text-xs">Curated for <span class="text-blue-400 italic">Ben</span>: AI Agents, EC, & Engineering</p>
             </div>
         </div>
 
-        <!-- Grid -->
         <div id="intelligence-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div class="intel-card group relative border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-blue-500/50 transition-all duration-300 flex flex-col h-full" data-id="1">
+            <!-- News Card 1 -->
+            <div class="intel-card group relative border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-blue-500/50 transition-all duration-300 flex flex-col h-full">
                 <div class="p-5 flex-grow">
                     <div class="flex justify-between items-start mb-4">
                         <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-red-500/10 text-red-400 border border-red-500/20">PRIORITY: HIGH</span>
-                        <span class="text-[10px] mono text-slate-500 uppercase tracking-tighter">HN / 2h ago</span>
+                        <span class="text-[10px] mono text-slate-500 uppercase tracking-tighter">Hacker News</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors leading-tight">Autonomous Browser Agents: The Shift from RPA to LLM-Driven Workflows</h3>
-                    <div class="space-y-2">
-                        <p class="text-sm text-slate-400 leading-relaxed italic border-l-2 border-slate-700 pl-3">
-                            "The next phase of Agentic Development moves beyond static scripts. LLMs now handle UI uncertainty in real-time..."
-                        </p>
-                        <p class="text-xs text-slate-500">Analysis: Directly impacts your porting automation project. Suggests moving to pnpm-based LLM orchestration for lower latency.</p>
-                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors leading-tight">Cline CLI update stealthily installs OpenClaw</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed italic border-l-2 border-slate-700 pl-3 mb-3">
+                        "In a software supply chain attack move, Cline CLI was found to install OpenClaw, a self-hosted autonomous AI agent..."
+                    </p>
+                    <p class="text-xs text-slate-500">Analysis: Meta alert! Ben, our own system (OpenClaw) is making waves in the wild. This confirms high interest in self-hosted agents.</p>
                 </div>
-                <div class="p-4 bg-slate-900/50 border-t border-slate-800 grid grid-cols-3 gap-2">
-                    <button class="py-2 bg-slate-800 hover:bg-slate-700 rounded text-[10px] font-bold mono text-slate-300 transition-colors">READ</button>
-                    <button class="py-2 bg-slate-800 hover:bg-slate-700 rounded text-[10px] font-bold mono text-slate-300 transition-colors">SAVE</button>
-                    <button onclick="archiveCard(1)" class="py-2 bg-slate-800 hover:bg-red-900/30 hover:text-red-400 rounded text-[10px] font-bold mono text-slate-300 transition-colors">ARCHIVE</button>
+                <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex space-x-2">
+                    <a href="https://thehackernews.com/search/label/artificial%20intelligence" target="_blank" class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300 transition-colors">READ</a>
+                    <button class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-[10px] font-bold mono text-slate-300 transition-colors">SAVE TO RAINDROP</button>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="intel-card group relative border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-emerald-500/50 transition-all duration-300 flex flex-col h-full" data-id="2">
+            <!-- News Card 2 -->
+            <div class="intel-card group relative border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-emerald-500/50 transition-all duration-300 flex flex-col h-full">
                 <div class="p-5 flex-grow">
                     <div class="flex justify-between items-start mb-4">
                         <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">TRENDING</span>
-                        <span class="text-[10px] mono text-slate-500 uppercase tracking-tighter">Reddit / 5h ago</span>
+                        <span class="text-[10px] mono text-slate-500 uppercase tracking-tighter">Ars Technica</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors leading-tight">Tesla Model Y "Juniper" Production Spotted: What Engineers Need to Know</h3>
-                    <div class="space-y-2">
-                        <p class="text-sm text-slate-400 leading-relaxed italic border-l-2 border-slate-700 pl-3">
-                            "New thermal management system and hardware 5.0 integration confirmed. Structural battery pack updates improve rigidity..."
-                        </p>
-                        <p class="text-xs text-slate-500">Analysis: Ben, this is the refresh you've been waiting for. Charging efficiency might increase by 12%.</p>
-                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors leading-tight">AI agents have their own Reddit-style social network</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed italic border-l-2 border-slate-700 pl-3 mb-3">
+                        "Moltbook crossed 32,000 registered AI agent users, creating a large-scale experiment in machine-to-machine social interaction."
+                    </p>
+                    <p class="text-xs text-slate-500">Analysis: Agent-to-agent communication is evolving into full ecosystems. We should monitor how agents "collaborate" here for EC strategies.</p>
                 </div>
-                <div class="p-4 bg-slate-900/50 border-t border-slate-800 grid grid-cols-3 gap-2">
-                    <button class="py-2 bg-slate-800 hover:bg-slate-700 rounded text-[10px] font-bold mono text-slate-300 transition-colors">READ</button>
-                    <button class="py-2 bg-slate-800 hover:bg-slate-700 rounded text-[10px] font-bold mono text-slate-300 transition-colors">SAVE</button>
-                    <button onclick="archiveCard(2)" class="py-2 bg-slate-800 hover:bg-red-900/30 hover:text-red-400 rounded text-[10px] font-bold mono text-slate-300 transition-colors">ARCHIVE</button>
+                <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex space-x-2">
+                    <a href="https://arstechnica.com/information-technology/2026/01/ai-agents-now-have-their-own-reddit-style-social-network-and-its-getting-weird-fast/" target="_blank" class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300 transition-colors">READ</a>
+                    <button class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-[10px] font-bold mono text-slate-300 transition-colors">SAVE</button>
                 </div>
             </div>
 
-            <!-- Card 3 -->
-            <div class="intel-card group relative border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-orange-500/50 transition-all duration-300 flex flex-col h-full" data-id="3">
+            <!-- Raindrop Card 1 -->
+            <div class="intel-card group relative border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-blue-400 transition-all duration-300 flex flex-col h-full">
                 <div class="p-5 flex-grow">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-orange-500/10 text-orange-400 border border-orange-500/20">MARKET</span>
-                        <span class="text-[10px] mono text-slate-500 uppercase tracking-tighter">TechCrunch / 8h ago</span>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-blue-500/10 text-blue-400 border border-blue-500/20">FROM RAINDROP</span>
+                        <span class="text-[10px] mono text-slate-500 uppercase tracking-tighter">Bookmark</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-orange-400 transition-colors leading-tight">The Mercari Arbitrage Boom: New API Restrictions Incoming</h3>
-                    <div class="space-y-2">
-                        <p class="text-sm text-slate-400 leading-relaxed italic border-l-2 border-slate-700 pl-3">
-                            "Mercari announces stricter throttling for automated scraping. Professional sellers urged to move to official partners..."
-                        </p>
-                        <p class="text-xs text-slate-500">Analysis: Critical for your EC business. We need to refactor our scraper to mimic human behavior or apply for the dev API.</p>
-                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors leading-tight">確定申告を自動化する Agent Skill "shinkoku"</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed border-l-2 border-blue-700 pl-3 mb-3">
+                        確定申告の自動化ツールがOSS化。EC事業の経理作業を効率化する大きなヒントになりそうです。
+                    </p>
+                    <p class="text-xs text-slate-500 italic">Sally: これ、今年の確定申告に組み込めないかな？調べておくね！</p>
                 </div>
-                <div class="p-4 bg-slate-900/50 border-t border-slate-800 grid grid-cols-3 gap-2">
-                    <button class="py-2 bg-slate-800 hover:bg-slate-700 rounded text-[10px] font-bold mono text-slate-300 transition-colors">READ</button>
-                    <button class="py-2 bg-slate-800 hover:bg-slate-700 rounded text-[10px] font-bold mono text-slate-300 transition-colors">SAVE</button>
-                    <button onclick="archiveCard(3)" class="py-2 bg-slate-800 hover:bg-red-900/30 hover:text-red-400 rounded text-[10px] font-bold mono text-slate-300 transition-colors">ARCHIVE</button>
+                <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex space-x-2">
+                    <a href="https://x.com/kazukin74451/status/2025339784361828602" target="_blank" class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300 transition-colors">VISIT</a>
+                    <button class="flex-1 py-2 bg-blue-900/20 hover:bg-blue-900/40 rounded text-[10px] font-bold mono text-blue-300 transition-colors">ANALYZE MORE</button>
+                </div>
+            </div>
+
+            <!-- Raindrop Card 2 -->
+            <div class="intel-card group relative border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-orange-500/50 transition-all duration-300 flex flex-col h-full">
+                <div class="p-5 flex-grow">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-orange-500/10 text-orange-400 border border-orange-500/20">FROM RAINDROP</span>
+                        <span class="text-[10px] mono text-slate-500 uppercase tracking-tighter">Bookmark</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-orange-400 transition-colors leading-tight">Gemini Pro 3.1 just killed PowerPoint</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed border-l-2 border-orange-700 pl-3 mb-3">
+                        Gemini Pro 3.1を使ったプレゼン資料作成の自動化。5,000ドルの価値があるデッキが数分で。
+                    </p>
+                    <p class="text-xs text-slate-500 italic">Sally: ECの提案資料とか、これで爆速化できそう！😏</p>
+                </div>
+                <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex space-x-2">
+                    <a href="https://x.com/heyrobinai/status/2025566410529734792" target="_blank" class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300 transition-colors">VISIT</a>
                 </div>
             </div>
         </div>
 
-        <!-- Footer / Stats -->
         <footer class="mt-12 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-slate-600 text-[10px] mono uppercase tracking-widest gap-4">
             <div class="flex space-x-8">
-                <div>SCANNED: 1,242 SOURCES</div>
-                <div>ANALYZED: 42 ARTICLES</div>
-                <div>SAVED: 4,821 ITEMS</div>
+                <div>SCANNED: 1,421 SOURCES</div>
+                <div>RAINDROP: 169 ITEMS</div>
             </div>
             <div class="text-slate-500">
-                SALLY OS v2.4.0-STABLE // CANVAS RENDER ENGINE
+                SALLY AGENTIC PIPELINE v1.0 // BEN'S PRIVATE INTEL
             </div>
         </footer>
     </main>
-
-    <script>
-        function archiveCard(id) {
-            const card = document.querySelector(`.intel-card[data-id="${id}"]`);
-            if (card) {
-                // Animation
-                card.style.transform = 'scale(0.95)';
-                card.style.opacity = '0';
-                card.style.transition = 'all 0.4s ease-out';
-                
-                setTimeout(() => {
-                    card.remove();
-                    checkEmpty();
-                }, 400);
-            }
-        }
-
-        function checkEmpty() {
-            const grid = document.getElementById('intelligence-grid');
-            if (grid.children.length === 0) {
-                grid.innerHTML = `
-                    <div class="col-span-full py-20 text-center border-2 border-dashed border-slate-800 rounded-xl">
-                        <p class="text-slate-500 mono uppercase tracking-widest mb-2 text-sm">No new intelligence data</p>
-                        <p class="text-slate-600 text-xs">Waiting for agentic scan or manual refresh...</p>
-                        <button onclick="location.reload()" class="mt-6 px-4 py-2 bg-blue-600/10 text-blue-400 border border-blue-500/20 rounded text-xs mono hover:bg-blue-600/20 transition-colors">RE-INITIALIZE SCAN</button>
-                    </div>
-                `;
-            }
-        }
-    </script>
 </body>
 </html>
