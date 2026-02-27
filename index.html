@@ -21,7 +21,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .mono { font-family: 'JetBrains+Mono', monospace; }
-        .card-gradient { background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%); }
+        .card-gradient { background: linear-gradient(135deg, rgba(30, 41, 59, 0.68) 0%, rgba(15, 23, 42, 0.84) 100%); }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-200 min-h-screen pb-12">
@@ -31,111 +31,120 @@
                 <span class="text-3xl">🦖</span>
                 <div>
                     <h1 class="text-xl font-bold tracking-tight text-white leading-none">Sally's Intel</h1>
-                    <p class="text-xs text-slate-400 mt-1 mono uppercase tracking-widest">Real-time Intelligence Board</p>
+                    <p class="text-xs text-slate-400 mt-1 mono uppercase tracking-widest">Real-data Intelligence Board</p>
                 </div>
             </div>
-            <div class="flex items-center space-x-6 text-sm mono text-right">
-                <div>
-                    <span class="text-slate-500 text-[10px]">LAST UPDATED</span>
-                    <p class="text-slate-300 font-medium">2026-02-27 00:20</p>
-                </div>
+            <div class="text-sm mono text-right">
+                <span class="text-slate-500 text-[10px]">LAST UPDATED (JST)</span>
+                <p class="text-slate-300 font-medium">2026-02-27 19:07</p>
             </div>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-6 py-8">
-        <div class="mb-8 flex justify-between items-end">
-            <div>
-                <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Intelligence Stream</h2>
-                <p class="text-slate-500 text-xs">Curated for <span class="text-blue-400 italic">Ben</span>: AI Agents, EC, & Engineering</p>
-            </div>
+        <div class="mb-8">
+            <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Top Impact (Last 24h)</h2>
+            <p class="text-slate-500 text-xs">Curated for <span class="text-blue-400 italic">Ben</span>: Agentic AI / Tesla / EC + latest Raindrop inputs</p>
         </div>
 
         <div id="intelligence-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- News Card 1 -->
-            <div class="intel-card group relative border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-blue-500/50 transition-all duration-300 flex flex-col h-full">
+            <div class="intel-card group border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-red-500/50 transition-all duration-300 flex flex-col h-full">
                 <div class="p-5 flex-grow">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-red-500/10 text-red-400 border border-red-500/20">PRIORITY: HIGH</span>
-                        <span class="text-[10px] mono text-slate-500 uppercase tracking-tighter">Hacker News</span>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-red-500/10 text-red-400 border border-red-500/20">AI AGENTS</span>
+                        <span class="text-[10px] mono text-slate-500 uppercase">TechTimes • 6h ago</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors leading-tight">Cline CLI update stealthily installs OpenClaw</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed italic border-l-2 border-slate-700 pl-3 mb-3">
-                        "In a software supply chain attack move, Cline CLI was found to install OpenClaw, a self-hosted autonomous AI agent..."
-                    </p>
-                    <p class="text-xs text-slate-500">Analysis: Meta alert! Ben, our own system (OpenClaw) is making waves in the wild. This confirms high interest in self-hosted agents.</p>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-red-300 leading-tight">Perplexity launches “Computer” for autonomous multi-agent workflows</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed italic border-l-2 border-slate-700 pl-3 mb-3">Single prompt → task decomposition → model routing (Claude/Gemini/ChatGPT etc.) in sandboxed cloud runtime, with long-running execution.</p>
+                    <p class="text-xs text-slate-500 italic">Sally’s Analysis: べんの開発は「単発プロンプト」より、複数エージェントを役割分担させる設計が勝ち筋。要件分解と監査ログ設計を先に作ると、実務の再現性が一気に上がる🔥</p>
                 </div>
-                <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex space-x-2">
-                    <a href="https://thehackernews.com/search/label/artificial%20intelligence" target="_blank" class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300 transition-colors">READ</a>
-                    <button class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-[10px] font-bold mono text-slate-300 transition-colors">SAVE TO RAINDROP</button>
+                <div class="p-4 bg-slate-900/50 border-t border-slate-800">
+                    <a href="https://www.techtimes.com/articles/314864/20260226/perplexity-unveils-computer-autonomous-multi-agent-ai-that-plans-builds-executes-complex-tasks.htm" target="_blank" class="block py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300">READ</a>
                 </div>
             </div>
 
-            <!-- News Card 2 -->
-            <div class="intel-card group relative border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-emerald-500/50 transition-all duration-300 flex flex-col h-full">
+            <div class="intel-card group border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-sky-500/50 transition-all duration-300 flex flex-col h-full">
                 <div class="p-5 flex-grow">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">TRENDING</span>
-                        <span class="text-[10px] mono text-slate-500 uppercase tracking-tighter">Ars Technica</span>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-sky-500/10 text-sky-400 border border-sky-500/20">TESLA</span>
+                        <span class="text-[10px] mono text-slate-500 uppercase">Teslarati • 19h ago</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors leading-tight">AI agents have their own Reddit-style social network</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed italic border-l-2 border-slate-700 pl-3 mb-3">
-                        "Moltbook crossed 32,000 registered AI agent users, creating a large-scale experiment in machine-to-machine social interaction."
-                    </p>
-                    <p class="text-xs text-slate-500">Analysis: Agent-to-agent communication is evolving into full ecosystems. We should monitor how agents "collaborate" here for EC strategies.</p>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-sky-300 leading-tight">Model Y/3 China wait times compress to 1–3 weeks as Q1 closes</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed italic border-l-2 border-slate-700 pl-3 mb-3">Tesla China’s lead times for all Model 3/Model Y variants dropped to 1–3 weeks, often a precursor to demand-side promotions.</p>
+                    <p class="text-xs text-slate-500 italic">Sally’s Analysis: Juniperの供給が回り始めたサイン。短納期→販促強化の流れが来るなら、中古相場・周辺アクセ市場の変動が早い。価格ウォッチを週次じゃなく日次に上げたい👀</p>
                 </div>
-                <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex space-x-2">
-                    <a href="https://arstechnica.com/information-technology/2026/01/ai-agents-now-have-their-own-reddit-style-social-network-and-its-getting-weird-fast/" target="_blank" class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300 transition-colors">READ</a>
-                    <button class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-[10px] font-bold mono text-slate-300 transition-colors">SAVE</button>
+                <div class="p-4 bg-slate-900/50 border-t border-slate-800">
+                    <a href="https://www.teslarati.com/tesla-china-local-deliveries-q1-2026-final-month/" target="_blank" class="block py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300">READ</a>
                 </div>
             </div>
 
-            <!-- Raindrop Card 1 -->
-            <div class="intel-card group relative border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-blue-400 transition-all duration-300 flex flex-col h-full">
+            <div class="intel-card group border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-emerald-500/50 transition-all duration-300 flex flex-col h-full">
                 <div class="p-5 flex-grow">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-blue-500/10 text-blue-400 border border-blue-500/20">FROM RAINDROP</span>
-                        <span class="text-[10px] mono text-slate-500 uppercase tracking-tighter">Bookmark</span>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">E-COMMERCE</span>
+                        <span class="text-[10px] mono text-slate-500 uppercase">Modern Retail • 14h ago</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors leading-tight">確定申告を自動化する Agent Skill "shinkoku"</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed border-l-2 border-blue-700 pl-3 mb-3">
-                        確定申告の自動化ツールがOSS化。EC事業の経理作業を効率化する大きなヒントになりそうです。
-                    </p>
-                    <p class="text-xs text-slate-500 italic">Sally: これ、今年の確定申告に組み込めないかな？調べておくね！</p>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-emerald-300 leading-tight">Amazon sellers hold prices despite US tariff ruling volatility</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed italic border-l-2 border-slate-700 pl-3 mb-3">Even after a court ruling, many marketplace sellers keep prices elevated due to policy whiplash and persistent input costs.</p>
+                    <p class="text-xs text-slate-500 italic">Sally’s Analysis: べんのAmazon運用も「すぐ値下げ」が正解じゃない。原価変動が荒い局面は、在庫回転率と粗利防衛を優先した価格ルール化が効く📈</p>
                 </div>
-                <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex space-x-2">
-                    <a href="https://x.com/kazukin74451/status/2025339784361828602" target="_blank" class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300 transition-colors">VISIT</a>
-                    <button class="flex-1 py-2 bg-blue-900/20 hover:bg-blue-900/40 rounded text-[10px] font-bold mono text-blue-300 transition-colors">ANALYZE MORE</button>
+                <div class="p-4 bg-slate-900/50 border-t border-slate-800">
+                    <a href="https://www.modernretail.co/operations/marketplace-briefing-online-merchants-arent-lowering-prices-despite-supreme-court-ruling/" target="_blank" class="block py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300">READ</a>
                 </div>
             </div>
 
-            <!-- Raindrop Card 2 -->
-            <div class="intel-card group relative border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-orange-500/50 transition-all duration-300 flex flex-col h-full">
+            <div class="intel-card group border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-violet-500/50 transition-all duration-300 flex flex-col h-full">
                 <div class="p-5 flex-grow">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-orange-500/10 text-orange-400 border border-orange-500/20">FROM RAINDROP</span>
-                        <span class="text-[10px] mono text-slate-500 uppercase tracking-tighter">Bookmark</span>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-violet-500/10 text-violet-400 border border-violet-500/20">RAINDROP</span>
+                        <span class="text-[10px] mono text-slate-500 uppercase">note.com</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-orange-400 transition-colors leading-tight">Gemini Pro 3.1 just killed PowerPoint</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed border-l-2 border-orange-700 pl-3 mb-3">
-                        Gemini Pro 3.1を使ったプレゼン資料作成の自動化。5,000ドルの価値があるデッキが数分で。
-                    </p>
-                    <p class="text-xs text-slate-500 italic">Sally: ECの提案資料とか、これで爆速化できそう！😏</p>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-violet-300 leading-tight">デザインはどこへ行く？「Figma離れ」と境界線の消失</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed border-l-2 border-violet-700 pl-3 mb-3">最近のツール変化を、職能の再定義（デザイン/開発の境界）として捉える考察記事。</p>
+                    <p class="text-xs text-slate-500 italic">Sally: これ、Agentic開発と完全に同じ潮流。役割ベースでチーム設計をやり直すと強い✨</p>
                 </div>
-                <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex space-x-2">
-                    <a href="https://x.com/heyrobinai/status/2025566410529734792" target="_blank" class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300 transition-colors">VISIT</a>
+                <div class="p-4 bg-slate-900/50 border-t border-slate-800">
+                    <a href="https://note.com/nokowashiyama/n/ndaa9790a9dc4" target="_blank" class="block py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300">VISIT</a>
+                </div>
+            </div>
+
+            <div class="intel-card group border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-orange-500/50 transition-all duration-300 flex flex-col h-full">
+                <div class="p-5 flex-grow">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-orange-500/10 text-orange-400 border border-orange-500/20">RAINDROP</span>
+                        <span class="text-[10px] mono text-slate-500 uppercase">zenn.dev</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-orange-300 leading-tight">WEBアプリ開発でよく使うデザインパターン整理</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed border-l-2 border-orange-700 pl-3 mb-3">実装で再利用しやすい設計パターンを体系化した実務向けリファレンス。</p>
+                    <p class="text-xs text-slate-500 italic">Sally: べんのポータル運用、ここをテンプレ化してAgentに渡すと実装スピード爆上がり🚀</p>
+                </div>
+                <div class="p-4 bg-slate-900/50 border-t border-slate-800">
+                    <a href="https://zenn.dev/frontline/articles/1ded5a62ace83e" target="_blank" class="block py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300">VISIT</a>
+                </div>
+            </div>
+
+            <div class="intel-card group border border-slate-800 rounded-xl overflow-hidden card-gradient hover:border-cyan-500/50 transition-all duration-300 flex flex-col h-full">
+                <div class="p-5 flex-grow">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">RAINDROP</span>
+                        <span class="text-[10px] mono text-slate-500 uppercase">Web Designing</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 leading-tight">モデルベースUIデザインの実践法（UX→UI変換）</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed border-l-2 border-cyan-700 pl-3 mb-3">概念・ユースケース・タスク・コンセプトの4モデルで、UXをUIに落とし込む方法論。</p>
+                    <p class="text-xs text-slate-500 italic">Sally: EC改善の要件整理にそのまま使える。施策の「なぜ」を残せるからABテストの質が上がる📊</p>
+                </div>
+                <div class="p-4 bg-slate-900/50 border-t border-slate-800">
+                    <a href="https://webdesigning.book.mynavi.jp/article/27485/" target="_blank" class="block py-2 bg-slate-800 hover:bg-slate-700 rounded text-center text-[10px] font-bold mono text-slate-300">VISIT</a>
                 </div>
             </div>
         </div>
 
         <footer class="mt-12 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-slate-600 text-[10px] mono uppercase tracking-widest gap-4">
             <div class="flex space-x-8">
-                <div>SCANNED: 1,421 SOURCES</div>
-                <div>RAINDROP: 169 ITEMS</div>
+                <div>NEWS: BRAVE SEARCH (PD)</div>
+                <div>RAINDROP: LIVE API (LATEST 3)</div>
             </div>
-            <div class="text-slate-500">
-                SALLY AGENTIC PIPELINE v1.0 // BEN'S PRIVATE INTEL
-            </div>
+            <div class="text-slate-500">SALLY AGENTIC PIPELINE v1.2 // BEN'S PRIVATE INTEL</div>
         </footer>
     </main>
 </body>
